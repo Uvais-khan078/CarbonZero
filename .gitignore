@@ -1,0 +1,19 @@
+# .gitignore
+
+# Build folders
+bin/
+obj/
+
+# VS and temp files
+.vs/
+*.user
+*.suo
+
+# Node modules
+node_modules/
+
+# Tailwind output
+wwwroot/css/output.css
+
+# Others
+.env
