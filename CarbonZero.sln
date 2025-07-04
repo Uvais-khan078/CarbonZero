@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarbonZero", "CarbonZero.csproj", "{7F05531C-AD99-A0CD-D16B-98765E39FF05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7F05531C-AD99-A0CD-D16B-98765E39FF05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7F05531C-AD99-A0CD-D16B-98765E39FF05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7F05531C-AD99-A0CD-D16B-98765E39FF05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7F05531C-AD99-A0CD-D16B-98765E39FF05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {96BD334A-CB80-4A52-9807-EA4C3B1377B5}
+	EndGlobalSection
+EndGlobal

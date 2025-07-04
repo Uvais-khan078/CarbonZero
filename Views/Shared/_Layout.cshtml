@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewData["Title"] - CarbonZero</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CarbonZero.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/output.css" />
+</head>
+
+<body class="bg-gradient-to-r from-green-50 via-white to-green-100 min-h-screen flex flex-col font-sans text-gray-800">
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a asp-area="" asp-controller="Home" asp-action="Index"
+                class="flex items-center gap-3 text-3xl font-extrabold text-green-900 tracking-wide">
+                <svg class="h-10 w-10 text-green-700" fill="none" stroke="currentColor" stroke-width="2"
+                    viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="10" stroke-width="2" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12l2 2 4-4" />
+                </svg>
+                CarbonZero
+            </a>
+            <div class="hidden md:flex space-x-8 text-lg font-semibold">
+                <a asp-area="" asp-controller="Home" asp-action="Index"
+                    class="text-green-800 hover:text-white hover:bg-green-700 px-5 py-2 rounded-lg transition duration-300">Home</a>
+                <a asp-area="" asp-controller="Home" asp-action="Privacy"
+                    class="text-green-800 hover:text-white hover:bg-green-700 px-5 py-2 rounded-lg transition duration-300">Privacy</a>
+            </div>
+            <div class="md:hidden">
+                <button type="button" aria-controls="mobile-menu" aria-expanded="false"
+                    class="inline-flex items-center justify-center p-2 rounded-md text-green-800 hover:text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-green-700"
+                    id="mobile-menu-button">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-8 w-8" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <div class="md:hidden" id="mobile-menu" hidden>
+            <div class="px-2 pt-2 pb-3 space-y-1 bg-white shadow-md rounded-b-lg">
+                <a asp-area="" asp-controller="Home" asp-action="Index"
+                    class="block px-3 py-2 rounded-md text-base font-semibold text-green-800 hover:text-white hover:bg-green-700 transition duration-300">Home</a>
+                <a asp-area="" asp-controller="Home" asp-action="Privacy"
+                    class="block px-3 py-2 rounded-md text-base font-semibold text-green-800 hover:text-white hover:bg-green-700 transition duration-300">Privacy</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-6xl mx-auto px-6 py-16">
+        @RenderBody()
+    </main>
+
+    <footer class="bg-white shadow-inner border-t border-green-300 py-6 mt-12">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-3 text-gray-700">
+            <span class="text-sm">&copy; 2025 <span class="font-semibold text-green-900">CarbonZero</span>. All rights
+                reserved.</span>
+            <a asp-area="" asp-controller="Home" asp-action="Privacy"
+                class="text-green-900 hover:underline text-sm font-medium">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script>
+        const menuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuButton.addEventListener('click', () => {
+            const isHidden = mobileMenu.hasAttribute('hidden');
+            if (isHidden) {
+                mobileMenu.removeAttribute('hidden');
+                menuButton.setAttribute('aria-expanded', 'true');
+            } else {
+                mobileMenu.setAttribute('hidden', '');
+                menuButton.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
